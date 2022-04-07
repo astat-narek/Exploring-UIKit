@@ -13,6 +13,7 @@
 		EBE980C227FE17C3002E8B73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE980C027FE17C3002E8B73 /* LaunchScreen.storyboard */; };
 		EBE980CC27FE1B65002E8B73 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980CB27FE1B65002E8B73 /* LoginView.swift */; };
 		EBE980CF27FEB16D002E8B73 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980CE27FEB16D002E8B73 /* OnboardingContainerViewController.swift */; };
+		EBE980D127FF5594002E8B73 /* OnvoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980D027FF5594002E8B73 /* OnvoardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EBE980C327FE17C3002E8B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBE980CB27FE1B65002E8B73 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EBE980CE27FEB16D002E8B73 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		EBE980D027FF5594002E8B73 /* OnvoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnvoardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,8 @@
 		EBE980B427FE17C0002E8B73 /* Financier */ = {
 			isa = PBXGroup;
 			children = (
-				EBE980CD27FEB145002E8B73 /* Onboarding */,
 				EBE980C927FE1AF6002E8B73 /* Files */,
+				EBE980CD27FEB145002E8B73 /* Onboarding */,
 				EBE980CA27FE1B3E002E8B73 /* Login */,
 				EBE980B527FE17C0002E8B73 /* AppDelegate.swift */,
 			);
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE980CE27FEB16D002E8B73 /* OnboardingContainerViewController.swift */,
+				EBE980D027FF5594002E8B73 /* OnvoardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				EBE980CC27FE1B65002E8B73 /* LoginView.swift in Sources */,
 				EBE980BA27FE17C0002E8B73 /* LoginViewController.swift in Sources */,
 				EBE980B627FE17C0002E8B73 /* AppDelegate.swift in Sources */,
+				EBE980D127FF5594002E8B73 /* OnvoardingViewController.swift in Sources */,
 				EBE980CF27FEB16D002E8B73 /* OnboardingContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
