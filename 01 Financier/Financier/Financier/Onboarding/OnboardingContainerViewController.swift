@@ -18,6 +18,8 @@ class OnboardingContainerViewController: UIViewController {
     var pages = [UIViewController]()
     var currentVC: UIViewController
     let closeButton = UIButton(type: .system)
+    let doneButton = UIButton(type: .system)
+
     
     weak var delegate: OnboardingContainerViewControllerDelegate?
     
@@ -84,7 +86,12 @@ class OnboardingContainerViewController: UIViewController {
         closeButton.setTitle("Close", for: [])
         closeButton.addTarget(self, action: #selector(closeTapped), for: .primaryActionTriggered)
         
+        doneButton.translatesAutoresizingMaskIntoConstraints = false
+        doneButton.setTitle("Done", for: [])
+        doneButton.addTarget(self, action: #selector(doneTapped), for: .primaryActionTriggered)
+        
         view.addSubview(closeButton)
+        view.addSubview(doneButton)
     }
     
     private func layout() {
@@ -92,6 +99,11 @@ class OnboardingContainerViewController: UIViewController {
         NSLayoutConstraint.activate([
             closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.safeAreaLayoutGuide.leadingAnchor, multiplier: 1),
             closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 1)
+        ])
+        // Done
+        NSLayoutConstraint.activate([
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: doneButton.trailingAnchor, multiplier: 1),
+            view.safeAreaLayoutGuide.bottomAnchor.constraint(equalToSystemSpacingBelow: doneButton.bottomAnchor, multiplier: 4)
         ])
         
     }
@@ -139,4 +151,9 @@ extension OnboardingContainerViewController {
     @objc func closeTapped(sender: UIButton) {
         delegate?.didFinishOnboarding()
     }
+    
+    @objc func doneTapped(sender: UIButton) {
+        delegate?.didFinishOnboarding()
+    }
+    
 }
