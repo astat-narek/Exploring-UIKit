@@ -17,6 +17,9 @@ protocol LoginViewControllerDelegate: AnyObject {
 
 class LoginViewController: UIViewController {
 
+    let financierLabel = UILabel()
+    let subtitleLabel = UILabel()
+    
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
@@ -46,6 +49,18 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func style() {
+        
+        financierLabel.translatesAutoresizingMaskIntoConstraints = false
+        financierLabel.textAlignment = .center
+        financierLabel.text = "Financier"
+        financierLabel.font = UIFont.preferredFont(forTextStyle: .title1).withSize(35)
+        
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.text = "Your premium source for all things banking!"
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -63,27 +78,36 @@ extension LoginViewController {
     }
     
     private func layout() {
+        view.addSubview(financierLabel)
+        view.addSubview(subtitleLabel)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
         
         // Loging View
         NSLayoutConstraint.activate([
+        // Title
+            financierLabel.topAnchor.constraint(equalTo: loginView.topAnchor, constant: -130),
+            financierLabel.centerXAnchor.constraint(equalTo: loginView.centerXAnchor),
+            financierLabel.widthAnchor.constraint(equalTo: loginView.widthAnchor),
+            
+        // Sub title
+            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: financierLabel.bottomAnchor, multiplier: 2),
+            subtitleLabel.centerXAnchor.constraint(equalTo: financierLabel.centerXAnchor),
+            subtitleLabel.widthAnchor.constraint(equalTo: financierLabel.widthAnchor),
+            
+        // Login fields
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1)
-        ])
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
         
         // Button
-        NSLayoutConstraint.activate([
             signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
             signInButton.centerXAnchor.constraint(equalTo: loginView.centerXAnchor),
-            signInButton.widthAnchor.constraint(equalTo: loginView.widthAnchor)
-        ])
+            signInButton.widthAnchor.constraint(equalTo: loginView.widthAnchor),
         
         // Error label
         
-        NSLayoutConstraint.activate([
             errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
             errorMessageLabel.centerXAnchor.constraint(equalTo: loginView.centerXAnchor),
             errorMessageLabel.widthAnchor.constraint(equalTo: loginView.widthAnchor)
@@ -100,7 +124,7 @@ extension LoginViewController {
         
         // REMOVE
         delegate?.didLogin()
-        login()
+//        login()
     }
     
     private func login() {
