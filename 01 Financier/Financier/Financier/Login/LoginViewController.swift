@@ -17,7 +17,7 @@ protocol LoginViewControllerDelegate: AnyObject {
 
 class LoginViewController: UIViewController {
 
-    let financierLabel = UILabel()
+    let titleLabel = UILabel()
     let subtitleLabel = UILabel()
     
     let loginView = LoginView()
@@ -34,11 +34,26 @@ class LoginViewController: UIViewController {
         return loginView.passwordTextField.text
     }
     
+    //animation
+    var topInitialPosition: CGFloat = -160
+    var topFinalPosition: CGFloat = -135
+    
+    var subtitleTopInitialPosition: CGFloat = 20
+    var subtitleTopFinalPosition: CGFloat = 16
+    
+    var titleTopAnchor: NSLayoutConstraint?
+    var subTitleTopAnchor: NSLayoutConstraint?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         style()
         layout()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -50,16 +65,18 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     private func style() {
         
-        financierLabel.translatesAutoresizingMaskIntoConstraints = false
-        financierLabel.textAlignment = .center
-        financierLabel.text = "Financier"
-        financierLabel.font = UIFont.preferredFont(forTextStyle: .title1).withSize(35)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.text = "Financier"
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .title1).withSize(35)
+        titleLabel.alpha = 0
         
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.textAlignment = .center
         subtitleLabel.numberOfLines = 0
         subtitleLabel.text = "Your premium source for all things banking!"
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        subtitleLabel.alpha = 0
         
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -78,7 +95,7 @@ extension LoginViewController {
     }
     
     private func layout() {
-        view.addSubview(financierLabel)
+        view.addSubview(titleLabel)
         view.addSubview(subtitleLabel)
         view.addSubview(loginView)
         view.addSubview(signInButton)
@@ -87,19 +104,27 @@ extension LoginViewController {
         // Loging View
         NSLayoutConstraint.activate([
         // Title
-            financierLabel.topAnchor.constraint(equalTo: loginView.topAnchor, constant: -130),
-            financierLabel.centerXAnchor.constraint(equalTo: loginView.centerXAnchor),
-            financierLabel.widthAnchor.constraint(equalTo: loginView.widthAnchor),
+            titleLabel.centerXAnchor.constraint(equalTo: loginView.centerXAnchor),
+            titleLabel.widthAnchor.constraint(equalTo: loginView.widthAnchor),
             
-        // Sub title
-            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: financierLabel.bottomAnchor, multiplier: 2),
-            subtitleLabel.centerXAnchor.constraint(equalTo: financierLabel.centerXAnchor),
-            subtitleLabel.widthAnchor.constraint(equalTo: financierLabel.widthAnchor),
             
+        // Subtitle
+            subtitleLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor),
+            subtitleLabel.widthAnchor.constraint(equalTo: titleLabel.widthAnchor)
+            ])
+          
+        titleTopAnchor = titleLabel.topAnchor.constraint(equalTo: loginView.topAnchor, constant: topInitialPosition)
+        titleTopAnchor?.isActive = true
+        
+        subTitleTopAnchor = subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: subtitleTopInitialPosition)
+        subTitleTopAnchor?.isActive = true
+        
+        
         // Login fields
+        NSLayoutConstraint.activate([
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
+            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 2),
         
         // Button
             signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
@@ -112,6 +137,8 @@ extension LoginViewController {
             errorMessageLabel.centerXAnchor.constraint(equalTo: loginView.centerXAnchor),
             errorMessageLabel.widthAnchor.constraint(equalTo: loginView.widthAnchor)
         ])
+        
+
     }
 }
 
@@ -149,5 +176,25 @@ extension LoginViewController {
     private func configureView(withMessage message: String) {
         errorMessageLabel.isHidden = false
         errorMessageLabel.text = message
+    }
+}
+
+// MARK: - Animations
+
+extension LoginViewController {
+    private func animate() {
+        let animator1 = UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) {
+            self.titleTopAnchor?.constant = self.topFinalPosition
+            self.titleLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator1.startAnimation()
+        
+        let animator2 = UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) {
+            self.subTitleTopAnchor?.constant = self.subtitleTopFinalPosition
+            self.subtitleLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator2.startAnimation(afterDelay: 0.1)
     }
 }
