@@ -24,7 +24,18 @@
 		EBE980CC27FE1B65002E8B73 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980CB27FE1B65002E8B73 /* LoginView.swift */; };
 		EBE980CF27FEB16D002E8B73 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980CE27FEB16D002E8B73 /* OnboardingContainerViewController.swift */; };
 		EBE980D127FF5594002E8B73 /* OnvoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980D027FF5594002E8B73 /* OnvoardingViewController.swift */; };
+		EBEA50E72803010600642102 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA50E62803010600642102 /* CurrencyFormatterTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBEA50E12803005800642102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE980AA27FE17C0002E8B73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE980B127FE17C0002E8B73;
+			remoteInfo = Financier;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EBDAAD11280212550070248F /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
@@ -46,10 +57,19 @@
 		EBE980CB27FE1B65002E8B73 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EBE980CE27FEB16D002E8B73 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		EBE980D027FF5594002E8B73 /* OnvoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnvoardingViewController.swift; sourceTree = "<group>"; };
+		EBEA50DD2803005800642102 /* FinancierUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancierUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEA50E62803010600642102 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EBE980AF27FE17C0002E8B73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEA50DA2803005800642102 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE980B427FE17C0002E8B73 /* Financier */,
+				EBEA50DE2803005800642102 /* FinancierUnitTests */,
 				EBE980B327FE17C0002E8B73 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE980B227FE17C0002E8B73 /* Financier.app */,
+				EBEA50DD2803005800642102 /* FinancierUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +178,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		EBEA50DE2803005800642102 /* FinancierUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBEA50E62803010600642102 /* CurrencyFormatterTests.swift */,
+			);
+			path = FinancierUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +206,24 @@
 			productReference = EBE980B227FE17C0002E8B73 /* Financier.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EBEA50DC2803005800642102 /* FinancierUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBEA50E52803005800642102 /* Build configuration list for PBXNativeTarget "FinancierUnitTests" */;
+			buildPhases = (
+				EBEA50D92803005800642102 /* Sources */,
+				EBEA50DA2803005800642102 /* Frameworks */,
+				EBEA50DB2803005800642102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBEA50E22803005800642102 /* PBXTargetDependency */,
+			);
+			name = FinancierUnitTests;
+			productName = FinancierUnitTests;
+			productReference = EBEA50DD2803005800642102 /* FinancierUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +236,11 @@
 				TargetAttributes = {
 					EBE980B127FE17C0002E8B73 = {
 						CreatedOnToolsVersion = 13.3;
+					};
+					EBEA50DC2803005800642102 = {
+						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
+						TestTargetID = EBE980B127FE17C0002E8B73;
 					};
 				};
 			};
@@ -205,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				EBE980B127FE17C0002E8B73 /* Financier */,
+				EBEA50DC2803005800642102 /* FinancierUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +271,13 @@
 				EBDB1C0928018F9D006616B4 /* AccountSummaryHeaderView.xib in Resources */,
 				EBE980C227FE17C3002E8B73 /* LaunchScreen.storyboard in Resources */,
 				EBE980BF27FE17C3002E8B73 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEA50DB2803005800642102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +305,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBEA50D92803005800642102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBEA50E72803010600642102 /* CurrencyFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBEA50E22803005800642102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBE980B127FE17C0002E8B73 /* Financier */;
+			targetProxy = EBEA50E12803005800642102 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EBE980C027FE17C3002E8B73 /* LaunchScreen.storyboard */ = {
@@ -426,6 +503,55 @@
 			};
 			name = Release;
 		};
+		EBEA50E32803005800642102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3672SHQUYV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = astat.FinancierUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Financier.app/Financier";
+			};
+			name = Debug;
+		};
+		EBEA50E42803005800642102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3672SHQUYV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = astat.FinancierUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Financier.app/Financier";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +569,15 @@
 			buildConfigurations = (
 				EBE980C727FE17C3002E8B73 /* Debug */,
 				EBE980C827FE17C3002E8B73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEA50E52803005800642102 /* Build configuration list for PBXNativeTarget "FinancierUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEA50E32803005800642102 /* Debug */,
+				EBEA50E42803005800642102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
