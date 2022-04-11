@@ -29,8 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerForNotifications()
         
         
-//        displayLogin()
-        setRootViewController(mainViewController)
+        displayLogin()
         return true
     }
     
