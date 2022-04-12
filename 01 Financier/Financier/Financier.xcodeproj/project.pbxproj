@@ -20,6 +20,8 @@
 		EBDB1C0728018F56006616B4 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB1C0628018F55006616B4 /* AccountSummaryHeaderView.swift */; };
 		EBDB1C0928018F9D006616B4 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDB1C0828018F9D006616B4 /* AccountSummaryHeaderView.xib */; };
 		EBE7D71128049E0800208E06 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7D71028049E0800208E06 /* ShakeyBellView.swift */; };
+		EBE7D7132804CA1300208E06 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7D7122804CA1300208E06 /* Date+Utils.swift */; };
+		EBE7D7152805E96500208E06 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7D7142805E96500208E06 /* AccountSummaryViewController+Networking.swift */; };
 		EBE980B627FE17C0002E8B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980B527FE17C0002E8B73 /* AppDelegate.swift */; };
 		EBE980BA27FE17C0002E8B73 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980B927FE17C0002E8B73 /* LoginViewController.swift */; };
 		EBE980BF27FE17C3002E8B73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE980BE27FE17C3002E8B73 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		EBDB1C0628018F55006616B4 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		EBDB1C0828018F9D006616B4 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		EBE7D71028049E0800208E06 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
+		EBE7D7122804CA1300208E06 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		EBE7D7142805E96500208E06 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		EBE980B227FE17C0002E8B73 /* Financier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Financier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE980B527FE17C0002E8B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE980B927FE17C0002E8B73 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 				EBDAAD15280237CE0070248F /* CurrencyFormatter.swift */,
 				EB7D09182803459400F6630D /* NSNotificationName.swift */,
 				EB7D091A280348BB00F6630D /* UITextField+SecureToggle.swift */,
+				EBE7D7122804CA1300208E06 /* Date+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				EBDB1C042801860F006616B4 /* AccountSummaryViewController.swift */,
+				EBE7D7142805E96500208E06 /* AccountSummaryViewController+Networking.swift */,
 				EBDAAD0F2802120D0070248F /* Header */,
 				EBDAAD102802122E0070248F /* Cells */,
 			);
@@ -306,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE980CC27FE1B65002E8B73 /* LoginView.swift in Sources */,
+				EBE7D7132804CA1300208E06 /* Date+Utils.swift in Sources */,
 				EBDB1BFE27FFFEBE006616B4 /* LocalState.swift in Sources */,
 				EBDB1C022800DB0C006616B4 /* UIViewController+Utils.swift in Sources */,
 				EBDAAD142802363E0070248F /* DecimalUtils.swift in Sources */,
@@ -322,6 +329,7 @@
 				EBDB1C052801860F006616B4 /* AccountSummaryViewController.swift in Sources */,
 				EBE980CF27FEB16D002E8B73 /* OnboardingContainerViewController.swift in Sources */,
 				EBDB1C002800D171006616B4 /* MainViewController.swift in Sources */,
+				EBE7D7152805E96500208E06 /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
