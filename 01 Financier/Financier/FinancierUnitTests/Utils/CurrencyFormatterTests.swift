@@ -28,11 +28,11 @@ class Test: XCTestCase {
     
     func testDollarsFormatter() throws {
         let result = formatter.dollarsFormatted(929466)
-        XCTAssertEqual(result, "929,466.00 $")
+        XCTAssertEqual(result, "$929,466.00")
     }
     
     func testZeroDollarsFormatted() throws {
         let result = formatter.dollarsFormatted(0)
-        XCTAssertEqual(result, "0.00 $")
+        XCTAssertEqual(result, "$0.00")
     }
 }
