@@ -149,7 +149,7 @@ extension LoginViewController {
         errorMessageLabel.isHidden = true
         signInButton.configuration?.showsActivityIndicator = false
         
-        delegate?.didLogin()
+//        delegate?.didLogin() // delete
         login()
     }
     

@@ -24,6 +24,8 @@
 		EBE7D7152805E96500208E06 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7D7142805E96500208E06 /* AccountSummaryViewController+Networking.swift */; };
 		EBE7D719280624C700208E06 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7D718280624C700208E06 /* ProfileTests.swift */; };
 		EBE7D71B2806256600208E06 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7D71A2806256600208E06 /* AccountTests.swift */; };
+		EBE7D71D28074EF100208E06 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7D71C28074EF100208E06 /* SkeletonLoadable.swift */; };
+		EBE7D71F2807500F00208E06 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7D71E2807500F00208E06 /* SkeletonCell.swift */; };
 		EBE980B627FE17C0002E8B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980B527FE17C0002E8B73 /* AppDelegate.swift */; };
 		EBE980BA27FE17C0002E8B73 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980B927FE17C0002E8B73 /* LoginViewController.swift */; };
 		EBE980BF27FE17C3002E8B73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE980BE27FE17C3002E8B73 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		EBE7D7142805E96500208E06 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		EBE7D718280624C700208E06 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		EBE7D71A2806256600208E06 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		EBE7D71C28074EF100208E06 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		EBE7D71E2807500F00208E06 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		EBE980B227FE17C0002E8B73 /* Financier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Financier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE980B527FE17C0002E8B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE980B927FE17C0002E8B73 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				EBDAAD11280212550070248F /* AccountSummaryCell.swift */,
+				EBE7D71C28074EF100208E06 /* SkeletonLoadable.swift */,
+				EBE7D71E2807500F00208E06 /* SkeletonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -334,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE980CC27FE1B65002E8B73 /* LoginView.swift in Sources */,
+				EBE7D71F2807500F00208E06 /* SkeletonCell.swift in Sources */,
 				EBE7D7132804CA1300208E06 /* Date+Utils.swift in Sources */,
 				EBDB1BFE27FFFEBE006616B4 /* LocalState.swift in Sources */,
 				EBDB1C022800DB0C006616B4 /* UIViewController+Utils.swift in Sources */,
@@ -351,6 +358,7 @@
 				EBDB1C052801860F006616B4 /* AccountSummaryViewController.swift in Sources */,
 				EBE980CF27FEB16D002E8B73 /* OnboardingContainerViewController.swift in Sources */,
 				EBDB1C002800D171006616B4 /* MainViewController.swift in Sources */,
+				EBE7D71D28074EF100208E06 /* SkeletonLoadable.swift in Sources */,
 				EBE7D7152805E96500208E06 /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
