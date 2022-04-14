@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EB7D09192803459400F6630D /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D09182803459400F6630D /* NSNotificationName.swift */; };
 		EB7D091B280348BB00F6630D /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D091A280348BB00F6630D /* UITextField+SecureToggle.swift */; };
+		EB9574D02808BBA900AAF2DE /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9574CF2808BBA900AAF2DE /* ProfileManager.swift */; };
+		EB9574D22808BDE900AAF2DE /* AccountSummaryViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9574D12808BDE900AAF2DE /* AccountSummaryViewControllerTest.swift */; };
 		EBDAAD12280212550070248F /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAAD11280212550070248F /* AccountSummaryCell.swift */; };
 		EBDAAD142802363E0070248F /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAAD132802363E0070248F /* DecimalUtils.swift */; };
 		EBDAAD16280237CF0070248F /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAAD15280237CE0070248F /* CurrencyFormatter.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		EB7D09182803459400F6630D /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		EB7D091A280348BB00F6630D /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
+		EB9574CF2808BBA900AAF2DE /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		EB9574D12808BDE900AAF2DE /* AccountSummaryViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTest.swift; sourceTree = "<group>"; };
 		EBDAAD11280212550070248F /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		EBDAAD132802363E0070248F /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
 		EBDAAD15280237CE0070248F /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB9574CE2808BB8D00AAF2DE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EB9574CF2808BBA900AAF2DE /* ProfileManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		EBDAAD0F2802120D0070248F /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +174,7 @@
 			children = (
 				EBE7D718280624C700208E06 /* ProfileTests.swift */,
 				EBE7D71A2806256600208E06 /* AccountTests.swift */,
+				EB9574D12808BDE900AAF2DE /* AccountSummaryViewControllerTest.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -192,6 +205,7 @@
 				EBE980CA27FE1B3E002E8B73 /* Login */,
 				EBE980CD27FEB145002E8B73 /* Onboarding */,
 				EBDB1C03280185E7006616B4 /* AccountSummary */,
+				EB9574CE2808BB8D00AAF2DE /* Networking */,
 				EBE980C927FE1AF6002E8B73 /* Files */,
 				EBE7D70F28049DBF00208E06 /* Components */,
 				EBDB1BFC27FFFEA8006616B4 /* Utils */,
@@ -342,6 +356,7 @@
 				EBE980CC27FE1B65002E8B73 /* LoginView.swift in Sources */,
 				EBE7D71F2807500F00208E06 /* SkeletonCell.swift in Sources */,
 				EBE7D7132804CA1300208E06 /* Date+Utils.swift in Sources */,
+				EB9574D02808BBA900AAF2DE /* ProfileManager.swift in Sources */,
 				EBDB1BFE27FFFEBE006616B4 /* LocalState.swift in Sources */,
 				EBDB1C022800DB0C006616B4 /* UIViewController+Utils.swift in Sources */,
 				EBDAAD142802363E0070248F /* DecimalUtils.swift in Sources */,
@@ -370,6 +385,7 @@
 				EBEA50E72803010600642102 /* CurrencyFormatterTests.swift in Sources */,
 				EBE7D71B2806256600208E06 /* AccountTests.swift in Sources */,
 				EBE7D719280624C700208E06 /* ProfileTests.swift in Sources */,
+				EB9574D22808BDE900AAF2DE /* AccountSummaryViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
