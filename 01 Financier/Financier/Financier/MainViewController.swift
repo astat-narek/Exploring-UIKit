@@ -57,12 +57,12 @@ class MainViewController: UITabBarController {
 
 class MoveMoneyViewController: UIViewController {
     override func viewDidLoad() {
-        view.backgroundColor = .systemOrange
+        view.backgroundColor = .systemBackground
     }
 }
 
 class MoreViewController: UIViewController {
     override func viewDidLoad() {
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = .systemBackground
     }
 }

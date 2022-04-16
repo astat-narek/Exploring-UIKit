@@ -34,7 +34,7 @@
 		EBE980C227FE17C3002E8B73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE980C027FE17C3002E8B73 /* LaunchScreen.storyboard */; };
 		EBE980CC27FE1B65002E8B73 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980CB27FE1B65002E8B73 /* LoginView.swift */; };
 		EBE980CF27FEB16D002E8B73 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980CE27FEB16D002E8B73 /* OnboardingContainerViewController.swift */; };
-		EBE980D127FF5594002E8B73 /* OnvoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980D027FF5594002E8B73 /* OnvoardingViewController.swift */; };
+		EBE980D127FF5594002E8B73 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE980D027FF5594002E8B73 /* OnboardingViewController.swift */; };
 		EBEA50E72803010600642102 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA50E62803010600642102 /* CurrencyFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +78,7 @@
 		EBE980C327FE17C3002E8B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBE980CB27FE1B65002E8B73 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EBE980CE27FEB16D002E8B73 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
-		EBE980D027FF5594002E8B73 /* OnvoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnvoardingViewController.swift; sourceTree = "<group>"; };
+		EBE980D027FF5594002E8B73 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		EBEA50DD2803005800642102 /* FinancierUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancierUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEA50E62803010600642102 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE980CE27FEB16D002E8B73 /* OnboardingContainerViewController.swift */,
-				EBE980D027FF5594002E8B73 /* OnvoardingViewController.swift */,
+				EBE980D027FF5594002E8B73 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -369,7 +369,7 @@
 				EBE7D71128049E0800208E06 /* ShakeyBellView.swift in Sources */,
 				EBDAAD12280212550070248F /* AccountSummaryCell.swift in Sources */,
 				EBE980B627FE17C0002E8B73 /* AppDelegate.swift in Sources */,
-				EBE980D127FF5594002E8B73 /* OnvoardingViewController.swift in Sources */,
+				EBE980D127FF5594002E8B73 /* OnboardingViewController.swift in Sources */,
 				EBDB1C052801860F006616B4 /* AccountSummaryViewController.swift in Sources */,
 				EBE980CF27FEB16D002E8B73 /* OnboardingContainerViewController.swift in Sources */,
 				EBDB1C002800D171006616B4 /* MainViewController.swift in Sources */,

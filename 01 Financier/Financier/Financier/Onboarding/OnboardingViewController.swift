@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class OnvoardingViewController: UIViewController {
+class OnboardingViewController: UIViewController {
     
     let stackView = UIStackView()
     let imageView = UIImageView()
@@ -37,7 +37,7 @@ class OnvoardingViewController: UIViewController {
     
 }
 
-extension OnvoardingViewController {
+extension OnboardingViewController {
     func style() {
         view.backgroundColor = .systemBackground
         
@@ -68,7 +68,9 @@ extension OnvoardingViewController {
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 1)
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 1),
+            
+            imageView.heightAnchor.constraint(equalToConstant: 200)
             ])
     }
 }

@@ -158,6 +158,7 @@ extension AccountSummaryViewController {
     private func fetchProfile(group: DispatchGroup, userId: String) {
         group.enter()
         profileManager.fetchProfile(forUserId: userId) { result in
+            sleep(3)
             switch result {
             case .success(let profile):
                 self.profile = profile
