@@ -23,7 +23,7 @@ extension UIViewController {
         headerLabel.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide)
             make.right.equalTo(view.safeAreaLayoutGuide)
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(96)
+            make.top.equalToSuperview().offset(96)
         }
     }
 }

@@ -41,6 +41,9 @@ enum Constants {
         static var cardHeader: UIFont {
             UIFont(name: "Copperplate", size: 35) ?? UIFont.preferredFont(forTextStyle: .title1).withSize(35)
         }
+        static var body: UIFont {
+            UIFont(name: "Copperplate", size: 20) ?? UIFont.preferredFont(forTextStyle: .title1).withSize(20)
+        }
     }
     
     enum Image {
