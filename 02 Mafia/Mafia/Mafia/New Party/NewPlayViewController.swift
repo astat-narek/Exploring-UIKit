@@ -19,11 +19,13 @@ class NewPlayViewController: UIViewController {
     
     private let playersStack = UIStackView()
     
+    private let startGameButton = UIButton()
     
     init(viewModel: NewPlayViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -86,23 +88,35 @@ extension NewPlayViewController {
         closeButton.setImage(UIImage(systemName: "xmark.circle.fill"), for: [])
         closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .primaryActionTriggered)
         closeButton.tintColor = Constants.Colors.black
+        closeButton.imageView?.contentMode = .scaleAspectFit
+
         
         // Stack
         playersStack.axis = .vertical
         playersStack.spacing = 10
         playersStack.distribution = .fillEqually
+        
+        //Start New Game Button
+        startGameButton.setTitle("Начать игру", for: [])
+        startGameButton.addTarget(self, action: #selector(startNewGameButton), for: .primaryActionTriggered)
+        startGameButton.backgroundColor = Constants.Colors.black
+        startGameButton.setTitleColor(Constants.Colors.gray, for: [])
+        startGameButton.layer.cornerRadius = 11
+        startGameButton.titleLabel?.font = Constants.Fonts.button
     }
     
     private func layout() {
         view.addSubview(closeButton)
         view.addSubview(playersStack)
+        view.addSubview(startGameButton)
         
         
         //Close Button
         closeButton.snp.makeConstraints { make in
             make.right.equalTo(view.safeAreaLayoutGuide).offset(-8)
             make.top.equalTo(view.safeAreaLayoutGuide)
-            make.height.equalTo(24)
+            make.height.width.equalTo(24)
+            
         }
         
         //Players Stack
@@ -111,6 +125,14 @@ extension NewPlayViewController {
             make.left.equalToSuperview().offset(24)
             make.right.equalToSuperview().offset(-53)
             make.bottom.equalToSuperview().offset(-240)
+        }
+        
+        //Start New Game Button
+        startGameButton.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(85)
+            make.right.equalToSuperview().offset(-85)
+            make.bottom.equalToSuperview().offset(-53)
+            make.height.equalTo(56)
         }
     }
 }
@@ -129,6 +151,11 @@ extension NewPlayViewController {
     @objc func closeButtonTapped() {
         print("Close Button Tapped")
         viewModel.close()
+    }
+    
+    @objc func startNewGameButton() {
+        print("Start New Game Tapped")
+        viewModel.openItem()
     }
     
 }

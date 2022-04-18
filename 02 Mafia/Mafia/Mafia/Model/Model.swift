@@ -11,6 +11,10 @@ struct Game {
     let partyId: Int
     let partyType: PartyType
     let player: [Player]
+
+    enum PartyType {
+        case free, tournament
+    }
 }
 
 struct Player {
@@ -26,6 +30,13 @@ struct Stats {
     let numberOfGamseLost: Int
 }
 
-enum PartyType {
-    case free, tournament
+struct Card {
+
+    let number: Int
+    let alias: String
+    let role: Role
+    
+    enum Role {
+        case sheriff, villager, mafiosi
+    }
 }

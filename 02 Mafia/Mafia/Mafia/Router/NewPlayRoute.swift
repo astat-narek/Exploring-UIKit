@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-protocol CustomRoute {
-    func openCustomScreen()
+protocol NewPlayRoute {
+    func openNewGameScreen()
 }
 
-extension CustomRoute where Self: Router {
+extension NewPlayRoute where Self: Router {
     func openNewGameScreen(with transition: Transition) {
         let router = DefaultRouter(rootTransition: transition)
         let viewModel = NewPlayViewModel(router: router)
@@ -22,9 +22,9 @@ extension CustomRoute where Self: Router {
         route(to: viewController, as: transition)
     }
 
-    func openCustomScreen() {
+    func openNewGameScreen() {
         openNewGameScreen(with: AnimatedTransition(animatedTransition: FadeAnimatedTransitioning()))
     }
 }
 
-extension DefaultRouter: CustomRoute {}
+extension DefaultRouter: NewPlayRoute {}

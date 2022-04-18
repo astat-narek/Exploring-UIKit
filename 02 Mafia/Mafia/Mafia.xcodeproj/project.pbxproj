@@ -21,11 +21,15 @@
 		EB5F90F0280C37F600100282 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90EF280C37F600100282 /* Router.swift */; };
 		EB5F90F2280C381600100282 /* DefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90F1280C381600100282 /* DefaultRouter.swift */; };
 		EB5F90F4280C395A00100282 /* NewPlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90F3280C395A00100282 /* NewPlayViewModel.swift */; };
-		EB5F90F6280C398D00100282 /* CustomRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90F5280C398D00100282 /* CustomRoute.swift */; };
+		EB5F90F6280C398D00100282 /* NewPlayRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90F5280C398D00100282 /* NewPlayRoute.swift */; };
 		EB5F90F8280C3C0600100282 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90F7280C3C0600100282 /* MainViewModel.swift */; };
-		EB5F90FA280C5CA100100282 /* InitialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90F9280C5CA100100282 /* InitialRouter.swift */; };
+		EB5F90FA280C5CA100100282 /* InitialRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90F9280C5CA100100282 /* InitialRoute.swift */; };
 		EB5F90FC280C633700100282 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90FB280C633700100282 /* UIViewController+extensions.swift */; };
 		EB5F9124280DD7E300100282 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F9123280DD7E300100282 /* Model.swift */; };
+		EB5F9126280DFFD500100282 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F9125280DFFD500100282 /* CardViewController.swift */; };
+		EB5F9129280E008700100282 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F9128280E008700100282 /* CardViewModel.swift */; };
+		EB5F912B280E020900100282 /* CardRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F912A280E020900100282 /* CardRoute.swift */; };
+		EB5F912D280E08B900100282 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F912C280E08B900100282 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,11 +51,15 @@
 		EB5F90EF280C37F600100282 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EB5F90F1280C381600100282 /* DefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRouter.swift; sourceTree = "<group>"; };
 		EB5F90F3280C395A00100282 /* NewPlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayViewModel.swift; sourceTree = "<group>"; };
-		EB5F90F5280C398D00100282 /* CustomRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoute.swift; sourceTree = "<group>"; };
+		EB5F90F5280C398D00100282 /* NewPlayRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayRoute.swift; sourceTree = "<group>"; };
 		EB5F90F7280C3C0600100282 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		EB5F90F9280C5CA100100282 /* InitialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRouter.swift; sourceTree = "<group>"; };
+		EB5F90F9280C5CA100100282 /* InitialRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRoute.swift; sourceTree = "<group>"; };
 		EB5F90FB280C633700100282 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		EB5F9123280DD7E300100282 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EB5F9125280DFFD500100282 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		EB5F9128280E008700100282 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		EB5F912A280E020900100282 /* CardRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRoute.swift; sourceTree = "<group>"; };
+		EB5F912C280E08B900100282 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 				EB5F90F7280C3C0600100282 /* MainViewModel.swift */,
 				EB5F9122280DD7D300100282 /* Model */,
 				EB5F90ED280C378800100282 /* New Party */,
+				EB5F9127280E006700100282 /* Card */,
 				EB5F90DE280C118D00100282 /* Utils */,
 				EB5F90EE280C37E000100282 /* Router */,
 				EB5F90E3280C355600100282 /* Transition */,
@@ -169,8 +178,9 @@
 			children = (
 				EB5F90EF280C37F600100282 /* Router.swift */,
 				EB5F90F1280C381600100282 /* DefaultRouter.swift */,
-				EB5F90F5280C398D00100282 /* CustomRoute.swift */,
-				EB5F90F9280C5CA100100282 /* InitialRouter.swift */,
+				EB5F90F5280C398D00100282 /* NewPlayRoute.swift */,
+				EB5F90F9280C5CA100100282 /* InitialRoute.swift */,
+				EB5F912A280E020900100282 /* CardRoute.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -181,6 +191,16 @@
 				EB5F9123280DD7E300100282 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EB5F9127280E006700100282 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				EB5F9125280DFFD500100282 /* CardViewController.swift */,
+				EB5F9128280E008700100282 /* CardViewModel.swift */,
+				EB5F912C280E08B900100282 /* CardView.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,13 +322,17 @@
 				EB5F90F2280C381600100282 /* DefaultRouter.swift in Sources */,
 				EB5F90EC280C369E00100282 /* Transitions.swift in Sources */,
 				EB5F90F4280C395A00100282 /* NewPlayViewModel.swift in Sources */,
-				EB5F90FA280C5CA100100282 /* InitialRouter.swift in Sources */,
+				EB5F90FA280C5CA100100282 /* InitialRoute.swift in Sources */,
 				EB5F90F8280C3C0600100282 /* MainViewModel.swift in Sources */,
 				EB5F9124280DD7E300100282 /* Model.swift in Sources */,
+				EB5F9129280E008700100282 /* CardViewModel.swift in Sources */,
+				EB5F9126280DFFD500100282 /* CardViewController.swift in Sources */,
 				EB5F90CA280C0E5000100282 /* AppDelegate.swift in Sources */,
-				EB5F90F6280C398D00100282 /* CustomRoute.swift in Sources */,
+				EB5F90F6280C398D00100282 /* NewPlayRoute.swift in Sources */,
 				EB5F90F0280C37F600100282 /* Router.swift in Sources */,
 				EB5F90FC280C633700100282 /* UIViewController+extensions.swift in Sources */,
+				EB5F912D280E08B900100282 /* CardView.swift in Sources */,
+				EB5F912B280E020900100282 /* CardRoute.swift in Sources */,
 				EB5F90EA280C368800100282 /* CustomAnimatedTransitioning.swift in Sources */,
 				EB5F90E0280C11A300100282 /* Constants.swift in Sources */,
 				EB5F90E8280C367500100282 /* FadeAnimatedTransitioning.swift in Sources */,

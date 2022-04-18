@@ -9,7 +9,7 @@ import Foundation
 
 
 final class NewPlayViewModel {
-    typealias Routes = CustomRoute & Closable
+    typealias Routes = CardRoute & Closable
     private var router: Routes
 
     init(router: Routes) {
@@ -21,7 +21,7 @@ final class NewPlayViewModel {
     }
 
     func openItem() {
-        router.openCustomScreen()
+        router.openCardScreen()
     }
     
     func close() {

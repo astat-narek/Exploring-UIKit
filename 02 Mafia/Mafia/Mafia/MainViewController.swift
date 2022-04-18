@@ -93,7 +93,7 @@ extension MainViewController {
         newPartyButton.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(85)
             make.right.equalToSuperview().offset(-85)
-            make.top.equalTo(logoImage.snp.bottom).offset(65)
+            make.bottom.equalToSuperview().offset(-53)
             make.height.equalTo(56)
         }
         

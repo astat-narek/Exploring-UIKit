@@ -8,7 +8,7 @@
 import Foundation
 
 final class MainViewModel {
-    typealias Routes = CustomRoute & Closable
+    typealias Routes = NewPlayRoute & Closable 
     private var router: Routes
 
     init(router: Routes) {
@@ -20,7 +20,7 @@ final class MainViewModel {
     }
     
     func openItem() {
-        router.openCustomScreen()
+        router.openNewGameScreen()
     }
     
     func close() {
