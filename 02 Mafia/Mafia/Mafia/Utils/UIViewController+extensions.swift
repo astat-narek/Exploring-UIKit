@@ -10,7 +10,7 @@ import UIKit
 
 
 extension UIViewController {
-    func addHeader(withTitle title: String) {
+    func addHeader(withTitle title: String) ->UILabel {
         let headerLabel = UILabel()
         
         headerLabel.text = title
@@ -23,7 +23,20 @@ extension UIViewController {
         headerLabel.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide)
             make.right.equalTo(view.safeAreaLayoutGuide)
-            make.top.equalToSuperview().offset(96)
+            make.top.equalTo(view.snp.top).offset(96)
+            make.height.equalTo(44)
         }
+        
+        return headerLabel
     }
+}
+
+
+extension UITextField {
+    func addPaddings() {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = UITextField.ViewMode.always
+    }
+    
 }

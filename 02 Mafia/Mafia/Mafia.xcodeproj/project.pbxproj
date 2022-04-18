@@ -25,6 +25,7 @@
 		EB5F90F8280C3C0600100282 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90F7280C3C0600100282 /* MainViewModel.swift */; };
 		EB5F90FA280C5CA100100282 /* InitialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90F9280C5CA100100282 /* InitialRouter.swift */; };
 		EB5F90FC280C633700100282 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F90FB280C633700100282 /* UIViewController+extensions.swift */; };
+		EB5F9124280DD7E300100282 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F9123280DD7E300100282 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		EB5F90F7280C3C0600100282 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		EB5F90F9280C5CA100100282 /* InitialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialRouter.swift; sourceTree = "<group>"; };
 		EB5F90FB280C633700100282 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		EB5F9123280DD7E300100282 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				EB5F90C9280C0E5000100282 /* AppDelegate.swift */,
 				EB5F90CD280C0E5000100282 /* MainViewController.swift */,
 				EB5F90F7280C3C0600100282 /* MainViewModel.swift */,
+				EB5F9122280DD7D300100282 /* Model */,
 				EB5F90ED280C378800100282 /* New Party */,
 				EB5F90DE280C118D00100282 /* Utils */,
 				EB5F90EE280C37E000100282 /* Router */,
@@ -170,6 +173,14 @@
 				EB5F90F9280C5CA100100282 /* InitialRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		EB5F9122280DD7D300100282 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB5F9123280DD7E300100282 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 				EB5F90F4280C395A00100282 /* NewPlayViewModel.swift in Sources */,
 				EB5F90FA280C5CA100100282 /* InitialRouter.swift in Sources */,
 				EB5F90F8280C3C0600100282 /* MainViewModel.swift in Sources */,
+				EB5F9124280DD7E300100282 /* Model.swift in Sources */,
 				EB5F90CA280C0E5000100282 /* AppDelegate.swift in Sources */,
 				EB5F90F6280C398D00100282 /* CustomRoute.swift in Sources */,
 				EB5F90F0280C37F600100282 /* Router.swift in Sources */,

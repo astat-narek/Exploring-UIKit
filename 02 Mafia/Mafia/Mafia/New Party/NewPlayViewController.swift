@@ -12,7 +12,13 @@ class NewPlayViewController: UIViewController {
     
     private let viewModel: NewPlayViewModel
     private let closeButton = UIButton()
+    
+    private lazy var headerLabel: UILabel = {
+        addHeader(withTitle: "Игроки за столом")
+    }()
+    
     private let playersStack = UIStackView()
+    
     
     init(viewModel: NewPlayViewModel) {
         self.viewModel = viewModel
@@ -25,8 +31,6 @@ class NewPlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addHeader(withTitle: "Игроки за столом")
         addPlayers()
         style()
         layout()
@@ -34,7 +38,6 @@ class NewPlayViewController: UIViewController {
 }
 
 extension NewPlayViewController {
-    
     
     private func addPlayers() {
         var players = [UITextField]()
@@ -52,9 +55,8 @@ extension NewPlayViewController {
             label.widthAnchor.constraint(equalToConstant: 29).isActive = true
             
             
-            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
-            textField.leftView = paddingView
-            textField.leftViewMode = UITextField.ViewMode.always
+
+            textField.addPaddings()
             textField.font = Constants.Fonts.body
             textField.textColor = Constants.Colors.black
             let attributes = [NSAttributedString.Key.font: Constants.Fonts.body.withSize(15),
@@ -62,7 +64,6 @@ extension NewPlayViewController {
             textField.attributedPlaceholder = NSAttributedString(string: "Введите имя игрока", attributes: attributes)
             textField.backgroundColor = .white
             textField.layer.cornerRadius = 5
-            textField.bounds.inset(by: UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 2))
             textField.delegate = self
             
             hStack.addArrangedSubview(label)
@@ -106,7 +107,7 @@ extension NewPlayViewController {
         
         //Players Stack
         playersStack.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(140)
+            make.top.equalTo(headerLabel.snp.bottom).offset(5)
             make.left.equalToSuperview().offset(24)
             make.right.equalToSuperview().offset(-53)
             make.bottom.equalToSuperview().offset(-240)
@@ -114,6 +115,13 @@ extension NewPlayViewController {
     }
 }
 
+
+extension NewPlayViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
 
 // MARK: - Actions
 
@@ -123,11 +131,4 @@ extension NewPlayViewController {
         viewModel.close()
     }
     
-}
-
-extension NewPlayViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
 }
