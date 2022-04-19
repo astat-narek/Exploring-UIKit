@@ -16,6 +16,8 @@ class CardViewController: UIViewController {
 
     private var headerLabel = UILabel()
     
+    private let card: CardView = CardView()
+    
     init(viewModel: CardViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -38,8 +40,8 @@ class CardViewController: UIViewController {
 extension CardViewController {
     
     func style() {
-        
         view.backgroundColor = Constants.Colors.gray
+        
         // Close button
         closeButton.setImage(UIImage(systemName: "xmark.circle.fill"), for: [])
         closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .primaryActionTriggered)
@@ -49,11 +51,20 @@ extension CardViewController {
     
     func layout() {
         view.addSubview(closeButton)
+        view.addSubview(card)
         //Close Button
         closeButton.snp.makeConstraints { make in
             make.right.equalTo(view.safeAreaLayoutGuide).offset(-8)
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.height.width.equalTo(24)
+            
+        }
+        
+        card.snp.makeConstraints { make in
+            make.top.equalTo(145)
+            make.bottom.equalTo(-145)
+            make.leading.equalTo(25)
+            make.trailing.equalTo(-25)
             
         }
         

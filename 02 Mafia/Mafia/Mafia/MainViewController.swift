@@ -86,7 +86,7 @@ extension MainViewController {
         
         
         logoImage.snp.makeConstraints { make in
-            make.center.equalTo(view.center)
+            make.center.equalTo(view.snp.center)
             make.width.equalTo(208)
         }
         

@@ -49,7 +49,7 @@ enum Constants {
     enum Image {
         static let mafiosiPic = UIImage(named: "mafiosi")
         static let villagerPic = UIImage(named: "villager")
-        static let sheriff_star = UIImage(named: "sheriff_star")
+        static let sheriff = UIImage(named: "sheriff")
     }
 }
 
