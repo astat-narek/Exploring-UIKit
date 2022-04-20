@@ -11,7 +11,7 @@ import Foundation
 final class CardViewModel {
     typealias Routes = Closable
     
-    var card =  Card(number: 1, alias: "Никнейм", role: Card.Role.mafiosi)
+    var card: Card = donCard
     
     private var router: Routes
 

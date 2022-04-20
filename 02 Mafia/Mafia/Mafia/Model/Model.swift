@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Game {
     let partyId: Int
@@ -32,11 +33,44 @@ struct Stats {
 
 struct Card {
 
-    let number: Int
-    let alias: String
     let role: Role
+    let roleImage: UIImage?
+    let cardColor: UIColor
+    let fontColor: UIColor
     
-    enum Role {
-        case sheriff, villager, mafiosi
+    enum Role: String {
+        case sheriff = "Шериф"
+        case villager = "Мирный"
+        case mafiosi = "Мафия"
+        case don = "Дон"
     }
 }
+
+let sheriffCard = Card(
+    role: Card.Role.sheriff,
+    roleImage: Constants.Image.sheriff ?? UIImage(),
+    cardColor: Constants.Colors.yellow,
+    fontColor: Constants.Colors.black
+)
+
+let villagerCard = Card(
+    role: Card.Role.villager,
+    roleImage: Constants.Image.villager ?? UIImage(),
+    cardColor: Constants.Colors.red,
+    fontColor: Constants.Colors.light
+)
+
+
+let mafiosiCard = Card(
+    role: Card.Role.mafiosi,
+    roleImage: Constants.Image.mafiosi ?? UIImage(),
+    cardColor: Constants.Colors.black,
+    fontColor: Constants.Colors.light
+)
+
+let donCard = Card(
+    role: Card.Role.don,
+    roleImage: Constants.Image.don ?? UIImage(),
+    cardColor: Constants.Colors.purple,
+    fontColor: Constants.Colors.light
+)

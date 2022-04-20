@@ -43,7 +43,7 @@ extension NewPlayViewController {
     
     private func addPlayers() {
         var players = [UITextField]()
-        
+        let cards = randomCardsList()
         for i in 1...10 {
             let label = UILabel()
             let textField = UITextField()
@@ -67,6 +67,7 @@ extension NewPlayViewController {
             textField.backgroundColor = .white
             textField.layer.cornerRadius = 5
             textField.delegate = self
+            textField.text = cards[i-1].role.rawValue
             
             hStack.addArrangedSubview(label)
             hStack.addArrangedSubview(textField)
@@ -134,6 +135,12 @@ extension NewPlayViewController {
             make.bottom.equalToSuperview().offset(-53)
             make.height.equalTo(56)
         }
+    }
+    
+    func randomCardsList() -> [Card]{
+        var cards: [Card] = [donCard, sheriffCard] + Array(repeating: villagerCard, count: 6) + Array(repeating: mafiosiCard, count: 2)
+        cards.shuffle()
+        return cards
     }
 }
 

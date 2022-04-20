@@ -13,10 +13,8 @@ class CardViewController: UIViewController {
     private let viewModel: CardViewModel
     
     private let closeButton = UIButton()
-
     private var headerLabel = UILabel()
-    
-    private let card: CardView = CardView()
+    private let cardView: CardView = CardView(for: donCard)
     
     init(viewModel: CardViewModel) {
         self.viewModel = viewModel
@@ -51,7 +49,7 @@ extension CardViewController {
     
     func layout() {
         view.addSubview(closeButton)
-        view.addSubview(card)
+        view.addSubview(cardView)
         //Close Button
         closeButton.snp.makeConstraints { make in
             make.right.equalTo(view.safeAreaLayoutGuide).offset(-8)
@@ -60,7 +58,7 @@ extension CardViewController {
             
         }
         
-        card.snp.makeConstraints { make in
+        cardView.snp.makeConstraints { make in
             make.top.equalTo(145)
             make.bottom.equalTo(-145)
             make.leading.equalTo(25)
@@ -69,6 +67,7 @@ extension CardViewController {
         }
         
     }
+
 }
 
 

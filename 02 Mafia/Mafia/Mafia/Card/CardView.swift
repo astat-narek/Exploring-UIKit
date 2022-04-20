@@ -11,19 +11,17 @@ import UIKit
 
 class CardView: UIView {
     
-    let alias = "Никнейм"
-    let roleImage: UIImage = Constants.Image.sheriff ?? UIImage()
-    let role = "Шериф"
-    let cardColor = Constants.Colors.yellow
-    let fontColor: UIColor = .black
+    let alias = "Ник"
+    
+    let card: Card = donCard
     
     private let aliasLabel =  UILabel()
     private let roleImageView = UIImageView()
     private let roleLabel = UILabel()
     
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    required init(for card: Card) {
+        super.init(frame: .zero)
         
         style()
         layout()
@@ -41,28 +39,29 @@ class CardView: UIView {
 extension CardView {
     
     func style() {
-        backgroundColor = Constants.Colors.yellow
+        backgroundColor = card.cardColor
         layer.cornerRadius = 20
+        layer.masksToBounds = true
         
         aliasLabel.text = alias
         aliasLabel.font = Constants.Fonts.cardHeader
         aliasLabel.textAlignment = .center
-        aliasLabel.textColor = fontColor
+        aliasLabel.textColor = card.fontColor
         
-        roleImageView.image = roleImage
-        roleImageView.tintColor = .black
+        roleImageView.image = card.roleImage
+        roleImageView.tintColor = Constants.Colors.black
         roleImageView.contentMode = .scaleAspectFit
         
-        roleLabel.text = role
+        roleLabel.text = card.role.rawValue
         roleLabel.font = Constants.Fonts.cardHeader
         roleLabel.textAlignment = .center
-        roleLabel.textColor = fontColor
+        roleLabel.textColor = card.fontColor
     }
     
     func layout() {
         addSubview(aliasLabel)
-        addSubview(roleImageView)
         addSubview(roleLabel)
+        addSubview(roleImageView)
         
         aliasLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(44)
@@ -70,8 +69,9 @@ extension CardView {
         }
         
         roleImageView.snp.makeConstraints { make in
+            make.height.equalTo(250)
             make.center.equalToSuperview()
-            make.width.equalTo(173)
+
         }
         
         roleLabel.snp.makeConstraints { make in

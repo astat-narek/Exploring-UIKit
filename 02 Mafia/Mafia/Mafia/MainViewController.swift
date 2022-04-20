@@ -49,7 +49,7 @@ extension MainViewController {
         editClubNameButton.setImage(UIImage(systemName: "pencil"), for: [])
         editClubNameButton.tintColor = Constants.Colors.gray
         
-        logoImage.image = Constants.Image.villagerPic
+        logoImage.image = Constants.Image.villager
         logoImage.contentMode = .scaleAspectFit
         
         newPartyButton.setTitle("Новая серия", for: [])

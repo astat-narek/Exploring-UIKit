@@ -26,7 +26,10 @@ enum Constants {
             
         }
         static var purple: UIColor {
-            UIColor(red: 0.3, green: 0.3, blue: 0.758, alpha: 1)
+            UIColor(red: 0.153, green: 0.094, blue: 0.388, alpha: 1)
+        }
+        static var light: UIColor {
+            .white
         }
     }
     
@@ -47,9 +50,10 @@ enum Constants {
     }
     
     enum Image {
-        static let mafiosiPic = UIImage(named: "mafiosi")
-        static let villagerPic = UIImage(named: "villager")
+        static let mafiosi = UIImage(named: "mafiosi")
+        static let villager = UIImage(named: "villager")
         static let sheriff = UIImage(named: "sheriff")
+        static let don = UIImage(named: "don")
     }
 }
 
