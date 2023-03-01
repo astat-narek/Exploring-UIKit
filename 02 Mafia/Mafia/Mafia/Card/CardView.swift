@@ -13,14 +13,15 @@ class CardView: UIView {
     
     let alias = "Ник"
     
-    let card: Card = donCard
+    let card: Card
     
     private let aliasLabel =  UILabel()
     private let roleImageView = UIImageView()
     private let roleLabel = UILabel()
     
     
-    required init(for card: Card) {
+    init(for card: Card) {
+        self.card = card
         super.init(frame: .zero)
         
         style()
