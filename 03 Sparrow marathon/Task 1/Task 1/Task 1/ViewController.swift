@@ -25,17 +25,17 @@ extension ViewController {
     func style() {
         view.backgroundColor = .systemBackground
         
-        rectView.translatesAutoresizingMaskIntoConstraints = false
         rectView.layer.cornerRadius = 20
         rectView.layer.shadowColor = UIColor.black.cgColor
-        rectView.layer.shadowOpacity = 0.5
+        rectView.layer.shadowOpacity = 0.8
         rectView.layer.shadowOffset = .zero
         rectView.layer.shadowRadius = 10
-        rectView.clipsToBounds = true
     }
     
     func layout() {
         view.addSubview(rectView)
+        
+        rectView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             rectView.widthAnchor.constraint(equalToConstant: 100),
@@ -56,6 +56,7 @@ class gradientView: UIView {
         gradient.frame = bounds
         gradient.colors = colors
         layer.addSublayer(gradient)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -65,6 +66,7 @@ class gradientView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         gradient.frame = bounds
+        gradient.cornerRadius = self.layer.cornerRadius
     }
     
 }
