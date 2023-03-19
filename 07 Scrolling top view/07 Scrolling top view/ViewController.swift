@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+ 
 class ViewController: UIViewController, UIScrollViewDelegate {
 
     let imageView = UIImageView(image: UIImage(named: "bg"))
