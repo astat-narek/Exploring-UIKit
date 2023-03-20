@@ -19,3 +19,8 @@
 
 ## 05 PopoverVC
 <img width="120" alt="image" src="https://user-images.githubusercontent.com/62169821/224956014-eadd22a1-984b-41cb-aa6c-5e1e0f3c02d6.png">
+
+## 06 Inertial square 
+https://user-images.githubusercontent.com/62169821/225728054-0e8d7be4-72dc-4ca6-8fa9-92b084356ddd.MOV
+
+
