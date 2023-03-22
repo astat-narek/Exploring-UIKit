@@ -57,11 +57,34 @@ extension ViewController {
 
 
 class BlueButton: UIButton {
+
+    override var isHighlighted: Bool {
+        didSet {
+            UIView.animate (withDuration: 0.15, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options:
+                                [.beginFromCurrentState, .allowUserInteraction]) {
+                self.transform = self.isHighlighted ? .init(scaleX: 0.94, y: 0.94) : .identity
+            }
+        }
+    }
+    
     
     init(title: String? = "Button Title") {
         super.init(frame: .zero)
+        
         setTitle(title, for: .normal)
-        setup()
+        layer.cornerRadius = 8
+        
+        var config = UIButton.Configuration.filled()
+        config.image = UIImage(systemName: "arrow.forward.circle.fill")
+        config.imagePlacement = .trailing
+        config.imagePadding = 8
+        config.contentInsets = NSDirectionalEdgeInsets(
+            top: 10,
+            leading: 14,
+            bottom: 10,
+            trailing: 14
+        )
+        configuration = config
     }
     
     
@@ -73,57 +96,27 @@ class BlueButton: UIButton {
     override func tintColorDidChange() {
         
         if self.tintAdjustmentMode == .dimmed {
-            self.backgroundColor = .gray
+            self.backgroundColor = .lightGray
         }
         
         super.tintColorDidChange()
     }
-    
-    
-    func setup() {
-        
-        layer.cornerRadius = 8
-        
-        var config = UIButton.Configuration.filled()
-        config.image = UIImage(systemName: "arrow.forward.circle.fill")
-        config.imagePlacement = .trailing
-        config.imagePadding = 8
-        
-        config.contentInsets = NSDirectionalEdgeInsets(
-            top: 10,
-            leading: 14,
-            bottom: 10,
-            trailing: 14
-        )
-        
-        let handler: UIButton.ConfigurationUpdateHandler = { button in
-            switch button.state {
-            case .normal:
-                buttonAnimateToOrigin()
-            case .highlighted:
-                buttonAnimateToSmaller()
-            default:
-                buttonAnimateToOrigin()
-            }
-        }
-        
-        
-        configurationUpdateHandler = handler
-        configuration = config
-        
-        func buttonAnimateToSmaller() {
-            UIView.animate(withDuration: 0.1, delay: 0, options: [.allowUserInteraction],
-                           animations: {
-                self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-            })
-        }
-        
-        func buttonAnimateToOrigin() {
-            UIView.animate(withDuration: 0.1, delay: 0, options: [.allowUserInteraction],
-                           animations: {
-                self.transform = CGAffineTransform.identity
-            })
-        }
-    }
 }
 
+
+
+
+
+//let handler: UIButton.ConfigurationUpdateHandler = { button in
+//            switch button.state {
+//            case .normal:
+//                buttonAnimateToOrigin()
+//            case .highlighted:
+//                buttonAnimateToSmaller()
+//            default:
+//                buttonAnimateToOrigin()
+//            }
+//        }
+//
+//
+//        configurationUpdateHandler = handler
