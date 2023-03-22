@@ -30,7 +30,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         imageView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: imageHeight)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        
+                
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
     }

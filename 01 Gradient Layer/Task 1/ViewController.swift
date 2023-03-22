@@ -54,6 +54,8 @@ class gradientView: UIView {
     init(colors: [CGColor]){
         super.init(frame: .zero)
         gradient.frame = bounds
+        gradient.startPoint = .init(x: 0, y: 0)
+        gradient.endPoint = .init(x: 1, y: 0.5)
         gradient.colors = colors
         layer.addSublayer(gradient)
         
