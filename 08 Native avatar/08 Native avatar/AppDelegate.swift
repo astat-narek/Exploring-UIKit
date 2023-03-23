@@ -34,3 +34,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// https://www.reddit.com/r/iOSProgramming/comments/flkrfd/custom_view_in_large_title_nav_bar_like/
