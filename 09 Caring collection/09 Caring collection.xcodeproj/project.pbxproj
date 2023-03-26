@@ -12,6 +12,7 @@
 		EB62369229D0AA7700841822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB62369129D0AA7700841822 /* ViewController.swift */; };
 		EB62369729D0AA7800841822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB62369629D0AA7800841822 /* Assets.xcassets */; };
 		EB62369A29D0AA7800841822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB62369829D0AA7800841822 /* LaunchScreen.storyboard */; };
+		EB6236A229D0AD7900841822 /* RectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6236A129D0AD7900841822 /* RectCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EB62369629D0AA7800841822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB62369929D0AA7800841822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB62369B29D0AA7800841822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6236A129D0AD7900841822 /* RectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				EB62368D29D0AA7700841822 /* AppDelegate.swift */,
 				EB62368F29D0AA7700841822 /* SceneDelegate.swift */,
 				EB62369129D0AA7700841822 /* ViewController.swift */,
+				EB6236A129D0AD7900841822 /* RectCell.swift */,
 				EB62369629D0AA7800841822 /* Assets.xcassets */,
 				EB62369829D0AA7800841822 /* LaunchScreen.storyboard */,
 				EB62369B29D0AA7800841822 /* Info.plist */,
@@ -137,6 +140,7 @@
 				EB62369229D0AA7700841822 /* ViewController.swift in Sources */,
 				EB62368E29D0AA7700841822 /* AppDelegate.swift in Sources */,
 				EB62369029D0AA7700841822 /* SceneDelegate.swift in Sources */,
+				EB6236A229D0AD7900841822 /* RectCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
