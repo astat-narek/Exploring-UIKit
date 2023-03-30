@@ -2,15 +2,16 @@
 ###### The folder was created for study purpose to explore UIKit features 
 
 ## 01 Gradient Layer
-<img width="120" alt="image" src="https://user-images.githubusercontent.com/62169821/224953735-00a256ee-23ee-47f7-979c-c43b41432ffb.png">
+<img width="850" alt="Screenshot 2023-03-30 at 20 35 36" src="https://user-images.githubusercontent.com/62169821/228918930-777cbce4-1aa0-4649-a014-d26fc9679b85.png">
 
 
 ## 02 Button Configuration 
-<img width="120" alt="image" src="https://user-images.githubusercontent.com/62169821/224955517-deb554bc-3c6f-4e9a-a91c-9804b8c0385f.png">
+https://user-images.githubusercontent.com/62169821/228919149-991e55e7-b283-408f-b73c-3b0c455b2b93.MOV
 
 
 ## 03 Slider Animation 
-<img width="120" alt="image" src="https://user-images.githubusercontent.com/62169821/224955740-73b69f98-c0c7-4ebd-b75f-67649b054f8c.png">
+https://user-images.githubusercontent.com/62169821/228919174-aa3b75fb-c342-4bfd-98a1-f24e791420cc.MOV
+
 
 
 ## 04 Diffable Table 
