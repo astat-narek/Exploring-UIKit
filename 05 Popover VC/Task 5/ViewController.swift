@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     let button: UIButton = UIButton(configuration: .plain())
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         setupView()
         layoutView()
     }
-
+    
     
     private func setupView() {
         button.setTitle("Present", for: .normal)
@@ -41,26 +41,15 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
     
     @objc func presentAction() {
         
-        let popoverVC = PopoverViewController()
-            popoverVC.modalPresentationStyle = .popover
-            popoverVC.preferredContentSize = CGSize(width: 300, height: 280)
-            popoverVC.popoverPresentationController?.delegate = self
-            popoverVC.popoverPresentationController?.sourceView =  self.button
-            popoverVC.popoverPresentationController?.sourceRect = button.bounds
-            present(popoverVC, animated: true, completion: nil)
+        
+        let navigationController = PopoverNavigationController(root: ChildController(), size: .init(width: 300, height: 280), sourceView: self.button, sourceRect: self.button.bounds, direction: .up)
+        self.present(navigationController,animated: true)
     }
     
     
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-        }
     
-    
-    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
-       }
-
-    
-       func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
-           return true
-       }
 }
+
+
+
+

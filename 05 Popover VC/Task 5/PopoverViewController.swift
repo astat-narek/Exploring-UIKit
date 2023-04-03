@@ -4,75 +4,62 @@
 //
 //  Created by Narek Danielyan on 14.03.2023.
 //
-
-import Foundation
 import UIKit
 
 
-class PopoverViewController: UIViewController {
-    
-    let closeButton: UIButton = UIButton(type: .close)
-    let bulbImage = UIImageView(image: UIImage(systemName: "lightbulb"), highlightedImage: UIImage(systemName: "lightbulb.fill"))
-    let segmentControl: UISegmentedControl = UISegmentedControl(items: ["280 pt", "150 pt"])
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        setupView()
-        layoutView()
+class PopoverNavigationController: UINavigationController, UIPopoverPresentationControllerDelegate {
+    init(root: UIViewController, size: CGSize, sourceView: UIView, sourceRect: CGRect, direction: UIPopoverArrowDirection) {
+        super.init (rootViewController: root)
+        modalPresentationStyle = .popover
+        preferredContentSize = size
+        popoverPresentationController?.permittedArrowDirections = [direction]
+        popoverPresentationController?.sourceView = sourceView
+        popoverPresentationController?.sourceRect = sourceRect
+        
+        popoverPresentationController?.delegate = self
     }
-
     
-    private func setupView() {
-        closeButton.addTarget(self, action: #selector(close), for: .primaryActionTriggered)
-        
-        segmentControl.selectedSegmentIndex = 0
-        segmentControl.addTarget(self, action: #selector(self.segmentedValueChanged(_:)), for: .valueChanged)
-        
-        bulbImage.contentMode = .scaleAspectFill
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
     
     
-    private func layoutView() {
-        view.addSubview(closeButton)
-        view.addSubview(segmentControl)
-        view.addSubview(bulbImage)
-        segmentControl.translatesAutoresizingMaskIntoConstraints = false
-        closeButton.translatesAutoresizingMaskIntoConstraints = false
-        bulbImage.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            closeButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
-            closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
-            
-            segmentControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            segmentControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
-            
-            bulbImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bulbImage.heightAnchor.constraint(equalToConstant: 45),
-            bulbImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 65)
-        ])
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
     }
+    
+    
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
+        return true
+    }
+    
 }
 
 
-extension PopoverViewController {
+
+
+
+class ChildController: UIViewController {
     
-    @objc func close() {
-        dismiss(animated: true)
-    }
-    
-    @objc func segmentedValueChanged(_ sender:UISegmentedControl) {
+    override func viewDidLoad() {
+        super.viewDidLoad ()
         
-        let firstSelected = segmentControl.selectedSegmentIndex == 0
+        let segment = UISegmentedControl(items: ["280pt", "150pt" ])
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
-            let viewHeight = firstSelected ? 280 : 150
-            self.preferredContentSize = CGSize(width: 300, height: viewHeight)
-        }
+        segment.addAction(.init(handler: { _ in
+            self.navigationController?.preferredContentSize = .init(width: 300, height: segment.selectedSegmentIndex == 0 ? 280 : 150)
+        }), for: .valueChanged)
         
-        self.bulbImage.tintColor = firstSelected ? .systemBlue : .systemYellow
-        self.bulbImage.isHighlighted = !firstSelected
+        segment.selectedSegmentIndex = .zero
+        
+        navigationItem.titleView = segment
+        
+        navigationItem.rightBarButtonItem = .init(systemItem: .close, primaryAction: .init(handler: { _ in
+            self.dismiss (animated: true)
+        }))
+        view.backgroundColor = .secondarySystemBackground
     }
 }
