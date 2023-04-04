@@ -4,27 +4,20 @@
 ## 01 Gradient Layer
 <img width="850" alt="Screenshot 2023-03-30 at 20 35 36" src="https://user-images.githubusercontent.com/62169821/228918930-777cbce4-1aa0-4649-a014-d26fc9679b85.png">
 
-
 ## 02 Button Configuration 
 https://user-images.githubusercontent.com/62169821/228919149-991e55e7-b283-408f-b73c-3b0c455b2b93.MOV
-
 
 ## 03 Slider Animation 
 https://user-images.githubusercontent.com/62169821/228919174-aa3b75fb-c342-4bfd-98a1-f24e791420cc.MOV
 
-
-
 ## 04 Diffable Table 
-<img width="120" alt="image" src="https://user-images.githubusercontent.com/62169821/224955872-e7e3a0c6-e5a2-489f-80b4-6ad50ae57eac.png">
-
+https://user-images.githubusercontent.com/62169821/229871799-e9dd3541-4846-445c-a5fb-941b7cc4bf75.MOV
 
 ## 05 PopoverVC
 https://user-images.githubusercontent.com/62169821/229589293-1c70c757-fe3c-4f4d-a4b8-6725b206ea03.MOV
 
-
 ## 06 Inertial square 
 https://user-images.githubusercontent.com/62169821/225728054-0e8d7be4-72dc-4ca6-8fa9-92b084356ddd.MOV
-
 
 ## 07 Scrolling top view
 https://user-images.githubusercontent.com/62169821/226274489-bdaadddc-ee07-4f3d-abd5-15bb191eb974.MP4
